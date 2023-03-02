@@ -13,10 +13,10 @@ for markdown_post in os.listdir('content'):
     with open(file_path, 'r') as file:
         POSTS[markdown_post] = markdown(file.read(), extras=['metadata'])
 
-    
-POSTS = {
-    post: POSTS[post] for post in sorted(POSTS, key=lambda post: datetime.strptime(POSTS[post].metadata['date'], '%Y-%m-%d'), reverse=True)
-}
+#
+# POSTS = {
+#     post: POSTS[post] for post in sorted(POSTS, key=lambda post: datetime.strptime(POSTS[post].metadata['date'], '%Y-%m-%d'), reverse=True)
+# }
 
 env = Environment(loader=PackageLoader('main', 'templates'))
 home_template = env.get_template('home.html')
