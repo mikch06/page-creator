@@ -3,8 +3,8 @@
 
 {% block content %}
 
-<h1>My Recipes</h1>
-
+<h1>🍷 Wine Diary</h1>
+<title>🍷 Wine Diary – Wein</title>
 <div class="flex three demo">
 
 {% for post in posts %}
@@ -16,12 +16,13 @@
                 <img src="{{ post.thumbnail }}">
             </header>
             <footer>
-                <h2>{{ post.title }}</h2>
+                <h2>{{ post.winename }}</h2>
                 <small>{{ post.date }}</small>
                 <p>
                     {{ post.summary}}
+
                 </p>
-                <a class="button" href="posts/{{ post.slug }}.html">Recipe</a>
+                <a class="button" href="posts/{{ post.date }}.html">Wein</a>
                 <br>
                 {% set list_of_tags = post.tags.split(",") %}
                 {% for tag in list_of_tags %}

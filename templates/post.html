@@ -2,10 +2,13 @@
 
 {% block content %}
 
-<h1>{{post.title}}</h1>
+<h1>{{post.winename}}</h1>
 <p>
     <small>{{post.date}}</small>
+    <small>{{post.category}}</small>
+
     {{post.content}}
 </p>
+<a class="button" href="../home.html">Home</a>
 
 {% endblock %}

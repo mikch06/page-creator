@@ -34,12 +34,14 @@ for post in POSTS:
 
     post_data = {
         'content': POSTS[post],
-        'title': post_metadata['title'],
-        'date': post_metadata['date']
+        'winename': post_metadata['winename'],
+        'date': post_metadata['date'],
+        'category': post_metadata['category'],
+
     }
 
     post_html = post_template.render(post=post_data)
-    post_file_path = 'output/posts/{slug}.html'.format(slug=post_metadata['slug'])
+    post_file_path = 'output/posts/{date}.html'.format(date=post_metadata['date'])
 
     os.makedirs(os.path.dirname(post_file_path), exist_ok=True)
     with open(post_file_path, 'w') as file:
