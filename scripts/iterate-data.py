@@ -9,7 +9,7 @@ with open(filename, 'r') as read_obj:
     for col in csv_dict_reader:
         #print(col['created'], col['title'], col['introtext'], col['catid'])
         dstamp = datetime.strptime(col['created'], '%Y-%m-%d %H:%M:%S')
-        tstamp = dstamp.strftime("%Y-%m-%d")
+        tstamp = dstamp.strftime("%Y.%m.%d")
 
         # Random number attach to filename
         rnmbr = random.randint(1, 99)
