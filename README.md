@@ -1,1 +1,1 @@
-A basic static site generator written in Python for learning purposes.
+A basic static site generator written in Python for static websites.
