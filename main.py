@@ -37,7 +37,7 @@ for post in POSTS:
         'winename': post_metadata['winename'],
         'date': post_metadata['date'],
         'category': post_metadata['category'],
-
+        'tags': post_metadata['tags'],
     }
 
     post_html = post_template.render(post=post_data)
