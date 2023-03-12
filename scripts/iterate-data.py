@@ -35,8 +35,8 @@ with open(filename, 'r') as read_obj:
         f.write("date: " + tstamp + "\n")
         f.write("category: " + col['catid'] + "\n")
         f.write("tags:\n")
+        f.write("image: " + col['introtext'] + "\n")
         f.write("---\n")
-        f.write(col['introtext'])
         f.close()
 
 
