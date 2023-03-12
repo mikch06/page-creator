@@ -11,11 +11,19 @@
 <br>
 📆 {{ post.date }}
 <br>
-                {% for tag in list_of_tags %}
-                    tag:<button class="shyButton mybutton">{{ tags }}</button>
-                {% endfor %}
 content
+<br>
+{% if tags|length %}
+<button class="btn btn-sm btn-info">{{ post.tags }}</button>
+{% else %}
+{% endif %}
+<br>
+{{ post.image }}
+<br>
 {% endfor %}
-
+Last edit:
+<script>
+document.write("last edit:" + " " +document.lastModified);
+</script>
 
 {% endblock %}
