@@ -31,6 +31,7 @@ for post in posts:
         'winename': post_metadata['winename'],
         'date': post_metadata['date'],
         'category': post_metadata['category'],
+        'image': post_metadata['image'],
         'tags': post_metadata['tags'],
     }
 
