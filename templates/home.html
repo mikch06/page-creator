@@ -3,7 +3,7 @@
 
 {% block content %}
 <h2>🍷 Wine Diary</h2>
-{% for post in posts %}
+{% for post in posts|sort(attribute="date", reverse=true) %}
 <a href="posts/{{ post.date }}.html">
     <h2>{{ post.winename }}</h2>
 </a>
@@ -21,9 +21,8 @@ content
 {{ post.image }}
 <br>
 {% endfor %}
-Last edit:
 <script>
-document.write("last edit:" + " " +document.lastModified);
+document.write("Last edit:" + " " +document.lastModified);
 </script>
 
 {% endblock %}
