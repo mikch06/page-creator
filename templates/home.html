@@ -11,18 +11,14 @@
 <br>
 📆 {{ post.date }}
 <br>
-content
 <br>
-{% if tags|length %}
-<button class="btn btn-sm btn-info">{{ post.tags }}</button>
-{% else %}
+{% if post.tags|length %}
+<button class="btn btn-sm btn-danger">{{ post.tags }}</button><br><br>
 {% endif %}
-<br>
 {{ post.image }}
-<br>
+<br><br>
 {% endfor %}
 <script>
 document.write("Last edit:" + " " +document.lastModified);
 </script>
-
 {% endblock %}
